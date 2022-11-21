@@ -1,0 +1,63 @@
+[[tutorial:model]]
+= Building the domain model
+
+Before we get to any code, we want to whiteboard our graph model.
+
+Our college will contain `departments`, each of which offer various `subjects` taught by a `teacher`.
+`Students` `enroll` for `courses` or `classes` that teach a `subject`.
+
+We're also going to model a `study buddy` which represents a group of `students` that get together to help one another study for a `class`.
+
+Here's what we came up with.
+
+image::model.png[Graph model, 770, 370]
+
+When we translate this model to Groovy, it ends up being pretty straightforward:
+
+[source, groovy]
+----
+class Department {
+    String name;
+    Set<Subject> subjects;
+}
+
+class Subject {
+    String name;
+    Department department;
+    Set<Teacher> teachers;
+    Set<Course> courses;
+}
+
+class Teacher {
+    String name;
+    Set<Course> courses;
+    Set<Subject> subjects;
+}
+
+class Course {
+    String name;
+    Subject subject;
+    Teacher teacher;
+    Set<Enrollment> enrollments;
+}
+
+class Student {
+    String name;
+    Set<Enrollment> enrollments;
+    Set<StudyBuddy> studyBuddies;
+}
+
+class Enrollment {
+    Student student;
+    Course course;
+    Date enrolledDate;
+}
+----
+
+When a student enrolls for a course, we're also going to keep track of the enrollment date.
+
+In the model, this will be stored as a property on the `ENROLLED` relationship between a student and a course.
+This kind of rich relationship is managed by the class `Enrollment` and is known as a ***relationship entity***.
+
+The important thing to take away here is that Neo4j-OGM supports Neo4j's philosophy of whiteboard friendly domain models.
+By focusing on the model the code almost writes itself.
