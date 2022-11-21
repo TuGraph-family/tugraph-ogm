@@ -4,7 +4,7 @@
 TuGraph-OGM(Object Graph Mapping), 源自 `Neo4j-OGM` 项目，TuGraph-OGM
 支持将JAVA对象（POJO）映射到TuGraph中，JAVA中的类映射为图中的节点、类中的集合映射为边、类的属性映射为图对象的属性，并提供了对应的函数操作图数据库，因此JAVA开发人员可以在熟悉的生态中轻松地使用TuGraph数据库。同时TuGraph-OGM兼容Neo4j-OGM，Neo4j生态用户可以无缝迁移到TuGraph数据库上。
 
-> TuGraph项目代码地址: https://code.alipay.com/fma/tugraph-db
+> TuGraph项目代码地址: https://github.com/TuGraph-db/tugraph-db
 
 ### TuGraph-OGM功能
 TuGraph-OGM提供以下函数操作TuGraph：
