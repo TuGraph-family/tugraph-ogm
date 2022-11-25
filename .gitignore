@@ -2,11 +2,9 @@
 .idea
 *.iml
 *target
-/neo4j
 *.db
 data
 out
-neo4j-home
 logs
 .classpath
 .project
