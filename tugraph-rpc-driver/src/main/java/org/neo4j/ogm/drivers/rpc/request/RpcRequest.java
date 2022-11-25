@@ -27,7 +27,7 @@ import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.alipay.tugraph.TuGraphRpcClient;
+import com.antgroup.tugraph.TuGraphRpcClient;
 
 import org.neo4j.driver.exceptions.ClientException;
 import org.neo4j.driver.exceptions.DatabaseException;

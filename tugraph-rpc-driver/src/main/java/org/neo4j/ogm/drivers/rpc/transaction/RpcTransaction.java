@@ -18,7 +18,7 @@
  */
 package org.neo4j.ogm.drivers.rpc.transaction;
 
-import com.alipay.tugraph.TuGraphRpcClient;
+import com.antgroup.tugraph.TuGraphRpcClient;
 
 import org.neo4j.ogm.transaction.AbstractTransaction;
 import org.neo4j.ogm.transaction.TransactionManager;

@@ -12,8 +12,8 @@
     <artifactId>tugraph-rpc-driver</artifactId>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -42,9 +42,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.antgroup</groupId>
+            <groupId>com.antgroup.tugraph</groupId>
             <artifactId>tugraph-java-rpc-client</artifactId>
-            <version>3.1.0</version>
+            <version>0.0.1</version>
         </dependency>
     </dependencies>
 

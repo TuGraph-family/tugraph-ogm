@@ -184,7 +184,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <java-module-name></java-module-name> <!-- to be overridden in sub modules -->
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
 
         <assertj.version>3.11.1</assertj.version>
         <caffeine.version>2.6.2</caffeine.version>
