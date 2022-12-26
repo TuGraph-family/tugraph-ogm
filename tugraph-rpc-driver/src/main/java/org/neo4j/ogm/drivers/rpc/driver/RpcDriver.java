@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-import com.alipay.tugraph.TuGraphRpcClient;
+import com.antgroup.tugraph.TuGraphRpcClient;
 
 import org.neo4j.driver.*;
 import org.neo4j.driver.exceptions.ServiceUnavailableException;

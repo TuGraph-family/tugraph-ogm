@@ -33,8 +33,6 @@
     <description>Aggregator for the test related submodules.</description>
 
     <modules>
-        <module>neo4j-ogm-integration-tests</module>
-        <module>neo4j-ogm-tests-report</module>
         <module>tugraph-ogm-integration-tests</module>
     </modules>
 

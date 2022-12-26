@@ -246,7 +246,7 @@ class AutoIndex {
     }
 
     public Statement getDropStatement() {
-        var statement = "DROP " + (this.name != null && this.description.contains(" FOR ") ?
+        String statement = "DROP " + (this.name != null && this.description.contains(" FOR ") ?
             this.description.substring(0, this.description.indexOf(this.name) + this.name.length()) :
             this.description);
         return new RowDataStatement(statement, emptyMap());
