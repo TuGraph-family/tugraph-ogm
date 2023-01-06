@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
+ | Modifications Copyright 2022 "Ant Group"
  | Copyright (c) 2002-2022 "Neo4j,"
  | Neo4j Sweden AB [http://neo4j.com]
  |
@@ -21,19 +22,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.neo4j</groupId>
-        <artifactId>neo4j-ogm</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
+        <groupId>com.antgroup.tugraph</groupId>
+        <artifactId>tugraph-ogm</artifactId>
+        <version>0.1.0</version>
     </parent>
 
-    <artifactId>neo4j-ogm-api</artifactId>
+    <artifactId>tugraph-ogm-api</artifactId>
 
-    <name>Neo4j-OGM Api</name>
-    <description>Neo4j-OGM's internal Api for connecting different transports.</description>
-    <url>https://neo4j.com/developer/neo4j-ogm</url>
+    <name>TuGraph-OGM Api</name>
+    <description>TuGraph-OGM's internal Api for connecting different transports.</description>
 
     <properties>
-        <java-module-name>org.neo4j.ogm.drivers.api</java-module-name>
+        <java-module-name>com.antgroup.tugraph.ogm.drivers.api</java-module-name>
     </properties>
 
     <dependencies>

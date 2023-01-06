@@ -1,0 +1,40 @@
+# this yaml will be triggered by push
+# it contains cpplint, build, ut-centOS7
+
+version: "1.5"
+
+only:
+  triggerType:
+    - push
+    - tagPush
+
+stages:
+  - build ogm
+
+build:
+  stage: build ogm
+  id: build
+  component: ant-code-build
+  inputs:
+    name: tugraph-build
+    environment:
+      type: LINUX_CONTAINER
+      computeType: xlarge
+      image: reg.docker.alibaba-inc.com/fma/tugraph-compile-centos7.3:1.1.1
+    resources: null
+    buildTasks:
+      - name: build
+        commands:
+          |
+          mkdir -p ~/.m2
+          echo "<settings>
+            <mirrors>
+              <mirror>
+                <id>huaweicloud</id>
+                <mirrorOf>*</mirrorOf>
+                <url>https://repo.huaweicloud.com/repository/maven/</url>
+              </mirror>
+            </mirrors>
+          </settings>" > ~/.m2/settings.xml
+          cd ${ACB_BUILD_DIR}/code-repo
+          mvn --batch-mode --update-snapshots verify

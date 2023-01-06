@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
+ | Modifications Copyright 2022 "Ant Group"
  | Copyright (c) 2002-2022 "Neo4j,"
  | Neo4j Sweden AB [http://neo4j.com]
  |
@@ -20,20 +21,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.neo4j</groupId>
-    <artifactId>neo4j-ogm</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <groupId>com.antgroup.tugraph</groupId>
+    <artifactId>tugraph-ogm</artifactId>
+    <version>0.1.0</version>
     <packaging>pom</packaging>
 
-    <name>Neo4j-OGM</name>
-    <description>Annotation based Object Graph Mapper for Neo4j Server with Repository and Conversion support
+    <name>TuGraph-OGM</name>
+    <description>Annotation based Object Graph Mapper for TuGraph Server with Repository and Conversion support
     </description>
-    <url>https://neo4j.com/developer/neo4j-ogm</url>
-    <inceptionYear>2015</inceptionYear>
+    <url>https://www.tugraph.org/</url>
     <organization>
-        <name>Neo Technology, Inc.</name>
-        <url>http://neotechnology.com/</url>
+        <name>Ant Group</name>
     </organization>
+
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -44,147 +44,34 @@
 
     <developers>
         <developer>
-            <id>gmeier</id>
-            <name>Gerrit Meier</name>
-            <email>gerrit.meier at neo4j.com</email>
-            <organization>Neo Technology</organization>
-            <organizationUrl>http://www.neotechnology.com</organizationUrl>
+            <id>liubingyelby</id>
+            <name>liubingyelby</name>
             <roles>
                 <role>Developer</role>
             </roles>
-            <timezone>+1</timezone>
-        </developer>
-        <developer>
-            <id>msimons</id>
-            <name>Michael Simons</name>
-            <email>michael.simons at neo4j.com</email>
-            <organization>Neo Technology</organization>
-            <organizationUrl>http://www.neotechnology.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+1</timezone>
-        </developer>
-        <developer>
-            <id>lwesthnielsen</id>
-            <name>Lasse Westh-Nielsen</name>
-            <email>lasse.westh-nielsen at neo4j.com</email>
-            <organization>Neo Technology</organization>
-            <organizationUrl>http://www.neotechnology.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+1</timezone>
-        </developer>
-        <developer>
-            <id>jjaderberg</id>
-            <name>Jonatan Jäderberg</name>
-            <email>jonatan.jaderberg at neo4j.com</email>
-            <organization>Neo Technology</organization>
-            <organizationUrl>http://www.neotechnology.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+1</timezone>
-        </developer>
-        <developer>
-            <id>vbickers</id>
-            <name>Vince Bickers</name>
-            <email>vince at graphaware.com</email>
-            <organization>GraphAware</organization>
-            <organizationUrl>http://www.graphaware.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>GMT</timezone>
-        </developer>
-        <developer>
-            <id>lmisquitta</id>
-            <name>Luanne Misquitta</name>
-            <email>luanne at graphaware.com</email>
-            <organization>GraphAware</organization>
-            <organizationUrl>http://www.graphaware.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+5:30</timezone>
-        </developer>
-        <developer>
-            <id>fhartman</id>
-            <name>František Hartman</name>
-            <email>frant.hartm at gmail.com</email>
-            <organization>GraphAware</organization>
-            <organizationUrl>http://www.graphaware.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>mangrish</id>
-            <name>Mark Angrish</name>
-            <email>mark at graphaware.com</email>
-            <organization>GraphAware</organization>
-            <organizationUrl>http://www.graphaware.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+11</timezone>
-        </developer>
-        <developer>
-            <id>nmervaillie</id>
-            <name>Nicolas Mervaillie</name>
-            <organization>GraphAware</organization>
-            <organizationUrl>http://www.graphaware.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-        </developer>
-        <developer>
-            <id>jasperblues</id>
-            <name>Jasper Blues</name>
-            <email>jasper at graphaware.com</email>
-            <organization>GraphAware</organization>
-            <organizationUrl>http://www.graphaware.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-        <developer>
-            <id>atg</id>
-            <name>Adam George</name>
-            <email>adam at graphaware.com</email>
-            <organization>GraphAware</organization>
-            <organizationUrl>http://www.graphaware.com</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>GMT</timezone>
         </developer>
     </developers>
+
+    <scm>
+        <url>https://github.com/TuGraph-db/tugraph-ogm/</url>
+    </scm>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/TuGraph-db/tugraph-ogm/issues</url>
+    </issueManagement>
 
     <modules>
         <module>api</module>
         <module>core</module>
-        <module>http-driver</module>
-        <module>bolt-driver</module>
-        <module>neo4j-ogm-tests</module>
+        <module>tugraph-ogm-test</module>
         <module>tugraph-rpc-driver</module>
     </modules>
-
-    <scm>
-        <url>http://github.com/neo4j/neo4j-ogm/</url>
-    </scm>
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/neo4j/neo4j-ogm/issues</url>
-    </issueManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <java-module-name></java-module-name> <!-- to be overridden in sub modules -->
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
 
         <assertj.version>3.11.1</assertj.version>
         <caffeine.version>2.6.2</caffeine.version>
@@ -194,8 +81,6 @@
         <commons-logging.version>1.2</commons-logging.version>
         <dropwizard-metrics.version>4.0.2</dropwizard-metrics.version>
         <classgraph.version>4.8.147</classgraph.version>
-        <httpclient.version>4.5.13</httpclient.version>
-        <httpcore.version>4.4.15</httpcore.version>
         <jackson.version>2.9.9</jackson.version>
         <jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
         <javassist.version>3.27.0-GA</javassist.version>
@@ -204,10 +89,6 @@
         <kotlin.version>1.3.50</kotlin.version>
         <logback.version>1.2.3</logback.version>
         <lucene.version>5.5.5</lucene.version>
-        <neo4j.version>4.4.6</neo4j.version>
-        <neo4j.edition>enterprise</neo4j.edition>
-        <neo4j-java-driver.version>4.4.5</neo4j-java-driver.version>
-        <ogm.properties>ogm-bolt.properties</ogm.properties>
         <maven-jar-plugin.version>3.0.1</maven-jar-plugin.version>
         <maven-checkstyle-plugin.version>3.1.0</maven-checkstyle-plugin.version>
         <maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
@@ -231,11 +112,12 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <jakarta.activation.version>1.2.2</jakarta.activation.version>
+        <maven.staging.plugin.version>1.6.7</maven.staging.plugin.version>
+        <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-
             <!--Compile and Runtime Dependencies -->
             <dependency>
                 <groupId>com.fasterxml.jackson</groupId>
@@ -251,17 +133,6 @@
                 <version>${kotlin.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpclient</artifactId>
-                <version>${httpclient.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpcore</artifactId>
-                <version>${httpcore.version}</version>
             </dependency>
 
             <dependency>
@@ -295,13 +166,6 @@
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
                 <version>${assertj.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.neo4j.test</groupId>
-                <artifactId>neo4j-harness</artifactId>
-                <version>${neo4j.version}</version>
                 <scope>test</scope>
             </dependency>
 
@@ -353,21 +217,6 @@
                 <version>${commons-logging.version}</version>
             </dependency>
 
-            <!-- Used in Bolt-Transport and related. -->
-            <dependency>
-                <groupId>org.neo4j.driver</groupId>
-                <artifactId>neo4j-java-driver</artifactId>
-                <version>${neo4j-java-driver.version}</version>
-            </dependency>
-
-            <!-- Embedded Driver Dependencies -->
-            <dependency>
-                <groupId>org.neo4j</groupId>
-                <artifactId>neo4j</artifactId>
-                <version>${neo4j.version}</version>
-                <scope>provided</scope>
-            </dependency>
-
             <dependency>
                 <groupId>io.github.classgraph</groupId>
                 <artifactId>classgraph</artifactId>
@@ -384,18 +233,6 @@
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-reflect</artifactId>
                 <version>${scala.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.neo4j</groupId>
-                <artifactId>neo4j-kernel</artifactId>
-                <version>${neo4j.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.neo4j</groupId>
-                <artifactId>neo4j-graphdb-api</artifactId>
-                <version>${neo4j.version}</version>
             </dependency>
 
             <!-- Incorrectly exported by server -->
@@ -419,8 +256,6 @@
                 <version>${jline.version}</version>
             </dependency>
 
-            <!-- Transitive dependencie of test containers, neo4j native and a couple of other things.
-            We don't use it directly. Let's use the max and hope for the best. -->
             <dependency>
                 <groupId>net.java.dev.jna</groupId>
                 <artifactId>jna</artifactId>
@@ -485,7 +320,6 @@
                     <configuration>
                         <configLocation>checkstyle/config.xml</configLocation>
                         <suppressionsLocation>checkstyle/suppressions.xml</suppressionsLocation>
-                        <headerLocation>checkstyle/java-header.txt</headerLocation>
                         <encoding>${project.build.sourceEncoding}</encoding>
                         <consoleOutput>true</consoleOutput>
                         <failsOnError>true</failsOnError>
@@ -517,6 +351,34 @@
         </pluginManagement>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.1.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <filters>
+                                <filter>
+                                    <!-- Do not copy the signatures in the META-INF folder.
+                                    Otherwise, this might cause SecurityExceptions when using the JAR. -->
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <executions>
                     <execution>
@@ -547,7 +409,7 @@
                         <id>enforce</id>
                         <configuration>
                             <rules>
-                                <DependencyConvergence/>
+<!--                                <DependencyConvergence/>-->
                                 <requireMavenVersion>
                                     <version>3.5.4</version>
                                 </requireMavenVersion>
@@ -653,43 +515,80 @@
 
     <profiles>
         <profile>
-            <id>http</id>
-            <properties>
-                <ogm.properties>ogm-http.properties</ogm.properties>
-            </properties>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>${maven.staging.plugin.version}</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven.gpg.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <distributionManagement>
+                <repository>
+                    <id>oss</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
         </profile>
-
         <profile>
-            <id>bolt</id>
-            <properties>
-                <ogm.properties>ogm-bolt.properties</ogm.properties>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>default</id>
-            <properties>
-                <ogm.properties>ogm-http.properties</ogm.properties>
-            </properties>
+            <id>snapshot</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>${maven.staging.plugin}</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven.gpg.plugin}</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>ossrh</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                </snapshotRepository>
+            </distributionManagement>
         </profile>
     </profiles>
-
-    <distributionManagement>
-<!--        <repository>-->
-<!--            &lt;!&ndash;            <id>dev</id>&ndash;&gt;-->
-<!--            &lt;!&ndash;            <name>Nexus Release Repository</name>&ndash;&gt;-->
-<!--            &lt;!&ndash;            <url>http://mvn.dev.alipay.net/artifactory/content/repositories/Alipay-Releases</url>&ndash;&gt;-->
-<!--            <id>archiva.admin</id>-->
-<!--            <name>Nexus Release Repository</name>-->
-<!--            <url>http://repo.alibaba-inc.com/nexus/content/groups/alirepositiry</url>-->
-<!--        </repository>-->
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Nexus Snapshot Repository</name>
-            <!--正式环境仓库，请注释-->
-            <!--            <url>http://repo.alibaba-inc.com/nexus/content/repositories/snapshots</url>-->
-            <!--测试环境仓库，日常开发发snapshot包使用-->
-            <url>http://mvn.dev.alipay.net/artifactory/content/repositories/Alipay-Snapshot</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>

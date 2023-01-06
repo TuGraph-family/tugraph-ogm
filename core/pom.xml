@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
+ | Modifications Copyright 2022 "Ant Group"
  | Copyright (c) 2002-2022 "Neo4j,"
  | Neo4j Sweden AB [http://neo4j.com]
  |
@@ -21,16 +22,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.neo4j</groupId>
-        <artifactId>neo4j-ogm</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
+        <groupId>com.antgroup.tugraph</groupId>
+        <artifactId>tugraph-ogm</artifactId>
+        <version>0.1.0</version>
     </parent>
 
-    <artifactId>neo4j-ogm-core</artifactId>
+    <artifactId>tugraph-ogm-core</artifactId>
 
-    <name>Neo4j-OGM Core</name>
-    <description>Neo4j-OGM is an Object Graph Mapping Library for Neo4j.</description>
-    <url>https://neo4j.com/developer/neo4j-ogm</url>
+    <name>TuGraph-OGM Core</name>
+    <description>TuGraph-OGM is an Object Graph Mapping Library for TuGraph.</description>
 
     <properties>
         <java-module-name>org.neo4j.ogm.core</java-module-name>
@@ -39,9 +39,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.neo4j</groupId>
-            <artifactId>neo4j-ogm-api</artifactId>
-            <version>4.0.0-SNAPSHOT</version>
+            <groupId>com.antgroup.tugraph</groupId>
+            <artifactId>tugraph-ogm-api</artifactId>
+            <version>0.1.0</version>
         </dependency>
 
         <dependency>
